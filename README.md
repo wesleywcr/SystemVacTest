@@ -38,7 +38,7 @@ $ yarn dev
 
 # Run API
 $ cd server
-$ yarn server
+$ node server
 ```
 
 # 📝License
