@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import { Container, Content, Title } from './styles';
 
 export default function HomePage() {
+ 
   return (
     <>
       <Header/>

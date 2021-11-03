@@ -9,21 +9,22 @@ import Pfizer from '../../public/images/pfizer.png';
 
 import {  ContainerCard,SectionHome,ScrollDiv  } from './styles';
 
-export default function Card(company) {
-const [data,setData] = useState([])
+export default function Card({dados}) {
+  
+// const [data,setData] = useState([])
 
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch('http://localhost:3333/company');
-      const data  = await response.json();
-      setData(data);
-    })();
-  }, []);
+//   useEffect(() => {
+//     (async () => {
+//       const response = await fetch('http://localhost:3333/company');
+//       const data  = await response.json();
+//       setData(data);
+//     })();
+//   }, []);
 
-{data.map((company)=>{
-  console.log(company.vaccines)
-})}
+// {data.map((company)=>{
+//   console.log(company.vaccines)
+// })}
 
   const [isModal, setModal] = useState(false);
   const [vaccine, setVaccine] = useState("Astrazeneca")
@@ -106,4 +107,16 @@ const [data,setData] = useState([])
    
   );
 };
+export async function getStaticProps() {
+  
+  const res = await fetch(`http://localhost:3333/company`)
+  const retorno = await res.json();
+  
+  return {
+    props:{
+      dados: retorno
+    }
+  }
+ 
+}
 

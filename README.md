@@ -5,6 +5,7 @@
 
 <img alt="author" src="https://img.shields.io/static/v1?label=license&message=MIT&color=240b36&labelColor=000000">
 </p>
+<img src=".github/home.png">
 
 # 📕 About
 
@@ -37,7 +38,7 @@ $ yarn install
 $ yarn dev
 
 # Run API
-$ cd server
+$ cd api
 $ node server
 ```
 
